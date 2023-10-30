@@ -33,7 +33,7 @@
             <a href="#products">Products</a>
             <a href="#categories">Categories</a>
             <a href="#review">Review</a>
-            <a href="blogs">Blogs</a>
+            <a href="#blogs">Blogs</a>
         </nav>
         <div class="icons">
             <div class="fa fa-bars" id="menu-btn"></div>
@@ -45,24 +45,45 @@
             <input type="search" id="search-box" name="" placeholder="Search Here...">
             <label for="search-box " class="fa fa-search"></label>
         </form>
-        <div class="shopping-cart">
-            <div class="box">
-                <i class="fa fa-trash"></i>
-                <img src="images/cart-img-1.png" alt="">
+        <div class="shopping-cart" id="shopping-cart">
+            
+            
+            <!-- <div class="box">
+                
                 <div class="content">
-                    <h3>Watermelon</h3>
-                    <span class="price">$5.99/-</span>
-                    <span class="quantity">Qty : 1</span>
+                    
+                    
+                    <span>Total</span>
+                    <span class="price">$0/-</span>
+                    <h3>Your cart is empty</h3>
+                    
                 </div>
 
-            </div>
-            <div class="box">
+            </div> -->
+
+            <!-- added a plus btn  
+                added js product
+            implement andded btn1 css  -->
+            <!-- <div class="box " >
+                <i class="btn1 fa fa-trash"></i>
+                <img src="images/cart-img-1.png" alt="">
+                <div class="content">
+                    
+                    <span class="price">$5/-</span>
+                    <span class="quantity">Qty : 1</span>
+                    <i class="btn1 fa fa-plus " ></i>
+                    <h3>Watermelon</h3>
+                </div>
+
+            </div> -->
+            <!-- <div class="box">
                 <i class="fa fa-trash"></i>
                 <img src="images/cart-img-2.png" alt="">
                 <div class="content">
-                    <h3>Onion</h3>
-                    <span class="price">$4.99/-</span>
+                    
+                    <span class="price">$4/-</span>
                     <span class="quantity">Qty : 1</span>
+                    <h3>Onion</h3>
                 </div>
 
             </div>
@@ -70,13 +91,15 @@
                 <i class="fa fa-trash"></i>
                 <img src="images/cart-img-3.png" alt="">
                 <div class="content">
-                    <h3>Chicken</h3>
-                    <span class="price">$10.99/-</span>
+                    
+                    <span class="price">$10/-</span>
                     <span class="quantity">Qty : 1</span>
+
+                    <h3>Chicken</h3>
                 </div>
 
-            </div>
-            <div class="total">total : $18.99/-</div>
+            </div> -->
+            <div class="total">total : $0/-</div>
             <a href="#" class="btn">Checkout</a>
         </div>
         <form action="#" class="login-form">
@@ -140,10 +163,10 @@
 
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide box">
-                    <img src="images/product-1.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-1 box">
+                    <img src="images/product-1.png"class="product-1-image">
+                    <h3 class="product-1-name">Fresh and organic</h3>
+                    <div class="price price-1">$12/- </div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -151,13 +174,13 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="1">add to cart</a>
                 </div>
 
-                <div class="swiper-slide box">
-                    <img src="images/product-2.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-2 box">
+                    <img src="images/product-2.png" class="product-2-image">
+                    <h3 class="product-2-name">Fresh and organic</h3>
+                    <div class="price price-2">$12/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -165,14 +188,14 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="2">add to cart</a>
 
                 </div>
                 
-                <div class="swiper-slide box">
-                    <img src="images/product-3.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-3 box">
+                    <img src="images/product-3.png" class="product-3-image">
+                    <h3 class="product-3-name">Fresh and organic</h3>
+                    <div class="price price-3">$199/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -180,15 +203,15 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="3">add to cart</a>
 
                 </div>
 
-                <div class="swiper-slide box">
+                <div class="swiper-slide product-4 box">
                     
-                    <img src="images/product-4.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                    <img src="images/product-4.png" class="product-4-image">
+                    <h3 class="product-4-name">Fresh and organic</h3>
+                    <div class="price price-4">$1/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -197,7 +220,7 @@
                         <i class="fa fa-star-half"></i>
                     </div>
 
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="4">add to cart</a>
                 
                 </div>
 
@@ -213,10 +236,10 @@
 
                 
 
-                <div class="swiper-slide box">
-                    <img src="images/product-5.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-5 box">
+                    <img src="images/product-5.png" class="product-5-image">
+                    <h3 class="product-5-name">Fresh and organic</h3>
+                    <div class="price price-5">$9/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -224,14 +247,14 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="5">add to cart</a>
 
                 </div>
                     
-                <div class="swiper-slide box">
-                    <img src="images/product-6.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-6 box">
+                    <img src="images/product-6.png" class="product-6-image">
+                    <h3 class="product-6-name">Fresh and organic</h3>
+                    <div class="price price-6">$129/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -239,14 +262,14 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="6">add to cart</a>
 
                 </div>
                 
-                <div class="swiper-slide box">
-                    <img src="images/product-7.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-7 box">
+                    <img src="images/product-7.png" class="product-7-image">
+                    <h3 class="product-7-name">Fresh and organic</h3>
+                    <div class="price price-7">$19/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -254,14 +277,14 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="7">add to cart</a>
 
                 </div>
 
-                <div class="swiper-slide box">
-                    <img src="images/product-8.png" alt="">
-                    <h3>Fresh and organic</h3>
-                    <div class="price">$12.99/- 15.99/-</div>
+                <div class="swiper-slide product-8 box">
+                    <img src="images/product-8.png" class="product-8-image">
+                    <h3 class="product-8-name">Fresh and organic</h3>
+                    <div class="price price-8">$19/-</div>
                     <div class="stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -269,7 +292,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half"></i>
                     </div>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="#products" class="btn add-to-cart" data-product-id="8">add to cart</a>
                 
                 </div>
                 <!-- <div class="swiper-pagination"></div> -->
@@ -383,6 +406,60 @@
 
 
     <!-- Review section -->
+
+    <!-- Blog section -->
+    <section class="blogs" id="blogs">
+        <h1 class="heading">Our <span> Blogs</span></h1>
+
+        <div class="box-conatiner">
+            <div class="box">
+                <img src="images/blog-1.jpg">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fa fa-user"> By User</i></a>
+                        <a href="#"><i class="fa fa-calendar"> By User</i></a>
+                    </div>
+                    <h3>Fresh And Organic Vegetables and Fruits</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident voluptatibus, aperiam adipisci deserunt ullam facere.
+                    </p>
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="images/blog-1.jpg">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fa fa-user"> By User</i></a>
+                        <a href="#"><i class="fa fa-calendar"> By User</i></a>
+                    </div>
+                    <h3>Fresh And Organic Vegetables and Fruits</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident voluptatibus, aperiam adipisci deserunt ullam facere.
+                    </p>
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/blog-1.jpg">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fa fa-user"> By User</i></a>
+                        <a href="#"><i class="fa fa-calendar"> By User</i></a>
+                    </div>
+                    <h3>Fresh And Organic Vegetables and Fruits</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident voluptatibus, aperiam adipisci deserunt ullam facere.
+                    </p>
+                    <a href="#" class="btn">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog section -->
+
+
+
 
 
 
