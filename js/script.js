@@ -147,6 +147,12 @@ const cart = [];
     });
 
     cartTotalElement.textContent = `Total: $${total}/-`;
+    
+    const ButtonBuy = document.createElement('div');
+    ButtonBuy.classList.add('btn');
+    ButtonBuy.innerHTML = "Buy Now";
+    cartDisplay.appendChild(cartTotalElement);
+    cartDisplay.appendChild(ButtonBuy);
       // Update the total price display
       
   }
