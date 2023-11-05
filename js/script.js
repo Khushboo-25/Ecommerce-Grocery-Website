@@ -154,7 +154,7 @@ const cart = [];
     if(total!==0)
     ButtonBuy.innerHTML = "Buy Now";
     else
-    ButtonBuy.innerHTML="Cheackout";
+    ButtonBuy.innerHTML="Checkout";
     cartDisplay.appendChild(cartTotalElement);
     cartDisplay.appendChild(ButtonBuy);
       // Update the total price display
