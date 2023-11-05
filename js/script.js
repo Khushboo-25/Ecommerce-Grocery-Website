@@ -146,11 +146,15 @@ const cart = [];
         cartDisplay.appendChild(cartItemDiv);
     });
 
+
     cartTotalElement.textContent = `Total: $${total}/-`;
     
     const ButtonBuy = document.createElement('div');
     ButtonBuy.classList.add('btn');
+    if(total!==0)
     ButtonBuy.innerHTML = "Buy Now";
+    else
+    ButtonBuy.innerHTML="Cheackout";
     cartDisplay.appendChild(cartTotalElement);
     cartDisplay.appendChild(ButtonBuy);
       // Update the total price display
@@ -169,42 +173,30 @@ const cart = [];
             addToCart(productId, productName, productPrice,productsrc);
         });
     });
-    function removeFromCart(productId) {
-      const productIndex = cart.findIndex((item) => item.id === productId);
-    
-      if (productIndex !== -1) {
-        if(cart[productIndex].quantity>2)
-        cart[productIndex].quantity--;
-        // If the product is found in the cart, remove it
-        else
+
+
+
+
+
+   
         function removeFromCart(productId) {
           const productIndex = cart.findIndex((item) => item.id === productId);
         
           if (productIndex !== -1) {
-            // If the product is found in the cart, remove it
-            cart.splice(productIndex, 1);
-          }
+            if (cart[productIndex].quantity > 1) {
+              cart[productIndex].quantity--;
+            } else {
+              // If the product quantity is 1, remove it from the cart
+              cart.splice(productIndex, 1);
+            }
         
-          // Update the shopping cart display
-          updateCartDisplay();
+            // Update the shopping cart display
+            updateCartDisplay();
         }
-        
-        document.addEventListener('click', function (event) {
-          if (event.target.classList.contains('fa-trash')) {
-            // Find the parent cart item's product ID
-            const productId = event.target.closest('data-product-id');
-            
-            // Call the removeFromCart function to remove the product from the cart
-            removeFromCart(productId);
-          }
-        });
-        
-
       }
-    
       // Update the shopping cart display
-      updateCartDisplay();
-    }
+      
+  
     
     document.addEventListener('click', function (event) {
       if (event.target.classList.contains('fa-trash')) {
