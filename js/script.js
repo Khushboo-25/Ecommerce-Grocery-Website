@@ -133,7 +133,7 @@ const cart = [];
 
         // Add the product details to the cart item
         cartItemDiv.innerHTML = `
-            <i class="fa fa-trash"></i>
+            <i class="fa fa-trash" data-product-id="${product.id}"></i>
             <img src="${product.source}" alt="">
             <div class="content">
                 <span class="price">$${product.price}/-</span>
@@ -169,3 +169,50 @@ const cart = [];
             addToCart(productId, productName, productPrice,productsrc);
         });
     });
+    function removeFromCart(productId) {
+      const productIndex = cart.findIndex((item) => item.id === productId);
+    
+      if (productIndex !== -1) {
+        if(cart[productIndex].quantity>2)
+        cart[productIndex].quantity--;
+        // If the product is found in the cart, remove it
+        else
+        function removeFromCart(productId) {
+          const productIndex = cart.findIndex((item) => item.id === productId);
+        
+          if (productIndex !== -1) {
+            // If the product is found in the cart, remove it
+            cart.splice(productIndex, 1);
+          }
+        
+          // Update the shopping cart display
+          updateCartDisplay();
+        }
+        
+        document.addEventListener('click', function (event) {
+          if (event.target.classList.contains('fa-trash')) {
+            // Find the parent cart item's product ID
+            const productId = event.target.closest('data-product-id');
+            
+            // Call the removeFromCart function to remove the product from the cart
+            removeFromCart(productId);
+          }
+        });
+        
+
+      }
+    
+      // Update the shopping cart display
+      updateCartDisplay();
+    }
+    
+    document.addEventListener('click', function (event) {
+      if (event.target.classList.contains('fa-trash')) {
+        // Find the parent cart item's product ID
+        const productId = event.target.getAttribute('data-product-id');
+        
+        // Call the removeFromCart function to remove the product from the cart
+        removeFromCart(productId);
+      }
+    });
+    
