@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700;1,900&family=Playpen+Sans:wght@300;400;500&display=swap');
-
 :root{
     --green: green;
     --black: #130f40;
@@ -10,7 +9,6 @@
     --border: .2rem solid rgba(0,0,0.1); 
     --outline: 0.1rem solid #666; 
 }
-
 html 
 {
     font-size: 62.5%;
@@ -342,7 +340,7 @@ section{
     height: 15rem;
 }
 .features .box-container .box h3{
-    font-size: 2.5rem ;
+    font-size: 2rem ;
     line-height: 1.8;
     color: var(--black);
 }
@@ -369,7 +367,7 @@ section{
     background:#fff;
     border-radius: .5rem ;
     text-align: center;
-    padding: 3rem 2rem;
+    padding-bottom: 3rem ;
     outline-offset:-1rem;
     outline: var(--outline);
     box-shadow: var(--box-shadow);
@@ -385,7 +383,7 @@ section{
     height: 20rem;
 }
 .products .product-slider .box h3{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--black);
 }
 .products .product-slider .box .price{
@@ -486,7 +484,7 @@ section{
 }
 .review .review-slider .box h3{
     padding-bottom: .5rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--black);
 }
 .review .review-slider .box .stars i{
